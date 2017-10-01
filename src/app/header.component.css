@@ -1,0 +1,20 @@
+.form-control{width:20%}
+
+.input-group.add-on {
+    width: 40%;
+}
+
+badge {
+    background-color: #d35400;
+    border-radius: 9999em;
+    border: 2px solid #fff;
+    color: #f7f7f7;
+    font-size: 12px;
+    line-height: 21px;
+    height: 25px;
+    position: absolute;
+    text-align: center;
+    right: -15px;
+    top: -4px;
+    width: 25px;
+}
