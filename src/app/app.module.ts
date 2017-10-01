@@ -9,7 +9,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-const appRoutes: Routes = [
+
+import { AppRoutingModule } from './app-routing.module';
+
+
+/* const appRoutes: Routes = [
    /*{ path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },
   {
@@ -21,12 +25,12 @@ const appRoutes: Routes = [
     redirectTo: '/heroes',
     pathMatch: 'full'
   },
-  { path: '**', component: PageNotFoundComponent } */
+  { path: '**', component: PageNotFoundComponent } 
 
   { path: 'home', component: HomeComponent },
   { path: 'about',      component: AboutComponent },
   { path: 'contact',      component: ContactComponent },
-];
+]; */
 
 const components = [AppComponent, HeaderComponent];
 
@@ -42,12 +46,7 @@ const components = [AppComponent, HeaderComponent];
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
-   
-   
+    AppRoutingModule
   ],
   entryComponents: components,
   providers: []
