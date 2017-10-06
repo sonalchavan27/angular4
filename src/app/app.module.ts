@@ -9,9 +9,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
+//import { NgbdModalComponent, NgbdModalContent } from './modal-component';
 
 import { AppRoutingModule } from './app-routing.module';
-
+import { ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { SliderComponent } from './slider/slider.component';
+import { CarouselModule } from 'angular4-carousel';
+import { ShippingComponent } from './shipping/shipping.component';
+import { OrdersComponent } from './orders/orders.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ShippingHistoryModalComponent } from './shipping-history-modal/shipping-history-modal.component';
+import {HttpClientModule} from '@angular/common/http';
+/* import { ModalDialogModule } from 'ngx-modal-dialog';
+import {ModalModule} from "ngx-modal"; */
 
 /* const appRoutes: Routes = [
    /*{ path: 'crisis-center', component: CrisisListComponent },
@@ -42,14 +54,24 @@ const components = [AppComponent, HeaderComponent];
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    SliderComponent,
+    ShippingComponent,
+    OrdersComponent,
+    ShippingHistoryModalComponent//,
+   // NgbdModalComponent, NgbdModalContent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    NgbModule,
+    CarouselModule,
+    BrowserAnimationsModule
+    //ModalModule
   ],
-  entryComponents: components,
-  providers: []
+  entryComponents: [components],
+  providers: [NgbDropdownConfig]
 })
 export class AppModule {
 
