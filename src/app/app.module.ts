@@ -68,7 +68,7 @@ const components = [AppComponent, HeaderComponent];
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule,
+    NgbModule.forRoot(),
     CarouselModule,
     BrowserAnimationsModule
     //ModalModule
