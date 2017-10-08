@@ -9,7 +9,13 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class NavComponent implements OnInit {
   
     constructor() {}
-  
+    isCollapsed = true;
+    
+     
+    
+      toggleMenu() {
+        this.isCollapsed = !this.isCollapsed;
+      }
   ngOnInit() {
   }
 

@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, OnChanges, EventEmitter,ViewEncapsulation } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 
@@ -13,6 +13,16 @@ import { ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-shipping-history-modal',
   templateUrl: './shipping-history-modal.component.html',
   styleUrls: ['./shipping-history-modal.component.css'],
+  encapsulation: ViewEncapsulation.None,
+  styles: [`
+    .dark-modal .modal-content {
+      background-color: #292b2c;
+      color: white;
+    }
+    .dark-modal .close {
+      color: white;   
+    }
+  `]
 })
 export class ShippingHistoryModalComponent {
   closeResult: string;
@@ -20,21 +30,7 @@ export class ShippingHistoryModalComponent {
     constructor(private modalService: NgbModal) {}
   
     open(content) {
-      this.modalService.open(content).result.then((result) => {
-        this.closeResult = `Closed with: ${result}`;
-      }, (reason) => {
-        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-      });
-    }
-  
-    private getDismissReason(reason: any): string {
-      if (reason === ModalDismissReasons.ESC) {
-        return 'by pressing ESC';
-      } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-        return 'by clicking on a backdrop';
-      } else {
-        return  `with: ${reason}`;
-      }
+      this.modalService.open(content, { windowClass: 'dark-modal' });
     }
 }
 

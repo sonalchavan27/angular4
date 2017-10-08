@@ -22,6 +22,8 @@ import { OrdersComponent } from './orders/orders.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShippingHistoryModalComponent } from './shipping-history-modal/shipping-history-modal.component';
 import {HttpClientModule} from '@angular/common/http';
+import { NgbdPopoverBasic } from './popover-basic';
+
 /* import { ModalDialogModule } from 'ngx-modal-dialog';
 import {ModalModule} from "ngx-modal"; */
 
@@ -58,8 +60,9 @@ const components = [AppComponent, HeaderComponent];
     SliderComponent,
     ShippingComponent,
     OrdersComponent,
-    ShippingHistoryModalComponent//,
-   // NgbdModalComponent, NgbdModalContent
+    ShippingHistoryModalComponent,
+    NgbdPopoverBasic
+   
   ],
   imports: [
     BrowserModule,

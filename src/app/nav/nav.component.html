@@ -14,11 +14,25 @@
                 <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/contact" routerLinkActive="active" href="#">Contact</a>
+                <a class="nav-link" routerLink="/contact" routerLinkActive="active" href="#" appPopover>Contact</a>
               </li>
             </ul>
 
            
+      </div>
+      <div class="collapse navbar-collapse" id="appNavigation" [ngbCollapse]="isCollapsed">
+        <div class="navbar-nav mr-auto">
+          <div class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" ngbDropdownToggle>
+                Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">Action - 1</button>
+              <button class="dropdown-item">Another Action</button>
+              <button class="dropdown-item">Something else is here</button>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
